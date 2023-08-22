@@ -1,4 +1,4 @@
-@smoke2
+@Regression
 Feature: Retail Home Page
 
   Background: 

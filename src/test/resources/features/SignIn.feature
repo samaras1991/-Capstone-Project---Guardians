@@ -1,4 +1,4 @@
-@smoke4
+@Regression
 Feature: Sign in Feature
 
   Background: 
@@ -16,6 +16,6 @@ Feature: Sign in Feature
     And User click on Create New Account button
     And User fill the signUp information with below data
       | name    | email               | password     | confirmPassword |
-      | mohamed | mohamed20@gmail.com | Mohamed1991@ | Mohamed1991@    |
+      | mohamed | mohamed2009@gmail.com | Mohamed1991@ | Mohamed1991@    |
     And User click on SignUp button
      Then Verify user account is created
