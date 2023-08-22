@@ -1,4 +1,4 @@
-@smoke3
+@Regression
 Feature: Retail Order Page
 
   Background: 
