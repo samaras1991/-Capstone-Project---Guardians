@@ -8,10 +8,12 @@ import org.junit.Assert;
 import io.cucumber.java.en.*;
 import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
+import tek.sdet.framework.utilities.DataGenerator;
 
 public class SignInSteps extends CommonUtility {
 	
 	POMFactory pom = new POMFactory();
+	private String randomEmail;
 	
 	
 	@Given("User is on retail website")
@@ -61,13 +63,15 @@ public class SignInSteps extends CommonUtility {
 	@When("User fill the signUp information with below data")
 	public void userFillTheSignUpInformationWithBelowData(io.cucumber.datatable.DataTable dataTable) {
 		// Converting DataTable to List of Maps for easy access
+		
+		 randomEmail = DataGenerator.getEmail();
         List<Map<String, String>> signUpDetails = dataTable.asMaps(String.class, String.class);
 
         // Assuming there's only one set of data in this example, but you can iterate through all sets if needed
         Map<String, String> data = signUpDetails.get(0);
 
         String name = data.get("name");
-        String email = data.get("email");
+        String email = randomEmail;
         String password = data.get("password");
         String confirmPassword = data.get("confirmPassword");
         

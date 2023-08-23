@@ -5,7 +5,8 @@ import java.util.Map;
 
 import org.junit.Assert;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
 import tek.sdet.framework.utilities.DataGenerator;
@@ -14,7 +15,8 @@ public class RetailAccountSteps extends CommonUtility {
 	
 	POMFactory pom = new POMFactory();
 
-	
+	private String randomPhone;
+	private String randomCard;
 	
 	
 	
@@ -26,11 +28,13 @@ public class RetailAccountSteps extends CommonUtility {
 	    
 	}
 	@When("User update Name {string} and Phone {string}")
+	
 	public void userUpdateNameAndPhone(String name, String phone) {
+		 randomPhone = DataGenerator.RandomPhoneNumber();
 		 clearTextUsingSendKeys(pom.retailAccount().nameField);
 		 sendText(pom.retailAccount().nameField,name);
 		 clearTextUsingSendKeys(pom.retailAccount().phoneField);
-		 sendText(pom.retailAccount().phoneField,phone);
+		 sendText(pom.retailAccount().phoneField,randomPhone);
 		 
 	    
 	}
@@ -76,11 +80,11 @@ public class RetailAccountSteps extends CommonUtility {
 //		    "securityCode": "657"
 //		  }
 //		]
-
+		 randomCard = DataGenerator.cardNumber();
 		
 		List<Map<String ,String>> cardInfo = dataTable.asMaps(String.class, String.class);
 		
-		sendText(pom.retailAccount().cardNumberField, cardInfo.get(0).get("cardNumber"));
+		sendText(pom.retailAccount().cardNumberField, randomCard);
 		sendText(pom.retailAccount().nameOnCardField, cardInfo.get(0).get("nameOnCard"));
 		selectByVisibleText(pom.retailAccount().expirationMonthField, cardInfo.get(0).get("expirationMonth"));
 		selectByVisibleText(pom.retailAccount().expireationYearField, cardInfo.get(0).get("expirationYear"));
@@ -121,12 +125,14 @@ public class RetailAccountSteps extends CommonUtility {
 	    
 	}
 	@When("user edit information with below data")
-	public void userEditInformationWithBelowData(io.cucumber.datatable.DataTable dataTable) {
+	public void userEditInformationWithBelowData(io.cucumber.datatable.DataTable dataTable)
+	{
+    randomCard = DataGenerator.cardNumber();
     List<Map<String ,String>> cardInfo = dataTable.asMaps(String.class, String.class);
     
     
 		clearTextUsingSendKeys(pom.retailAccount().cardNumberField2);
-		sendText(pom.retailAccount().cardNumberField2, cardInfo.get(0).get("cardNumber"));
+		sendText(pom.retailAccount().cardNumberField2, randomCard);
 		
 		clearTextUsingSendKeys(pom.retailAccount().nameOnCardField2);
 		sendText(pom.retailAccount().nameOnCardField2, cardInfo.get(0).get("nameOnCard"));
