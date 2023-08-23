@@ -61,6 +61,17 @@ public class RetailOrderSteps extends CommonUtility {
 		Assert.assertEquals(pom.retailOrderPage().cartItemQty.getText(), itemQtyInTheCart);
 		logger.info("Item qty in the cart was validated successfully");
 	}
+	
+	@Then("empty cart")
+	public void emptyCart() {
+		click(pom.retailOrderPage().cart);
+		List<WebElement> empty = pom.retailOrderPage().emptycart;
+		
+		for(WebElement emp : empty) {
+			click(emp);
+		}
+
+	}
 
 
 	//Place an order 

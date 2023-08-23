@@ -37,6 +37,13 @@ public class RetailOrderPage extends BaseSetup {
 	
 	@FindBy(xpath = "//span[@id='cartQuantity']")
 	public WebElement cartItemQty; // cart
+	@FindBy(xpath = "//p[text() ='Cart ']")
+	public WebElement cart;
+	
+	
+	
+	@FindBy(xpath = "//span[text()='Delete']")
+	public List<WebElement> emptycart;
 	
 	//Apex Legends
 	

@@ -1,4 +1,4 @@
-@Regression
+@Regression1
 Feature: Retail Order Page
 
   Background: 
@@ -16,7 +16,9 @@ Feature: Retail Order Page
     And User click on item
     And User select quantity '2'
     And User click add to Cart button
-    Then the cart icon quantity should change to '2'
+    And the cart icon quantity should change to '2'
+    #empty cart for next scenario
+    Then empty cart
 
   @plaseOrder
   Scenario: Verify User can place an order with Shipping address and payment Method on file
