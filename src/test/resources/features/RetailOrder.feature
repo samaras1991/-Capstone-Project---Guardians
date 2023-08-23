@@ -27,7 +27,7 @@ Feature: Retail Order Page
     And User click on Apex Legends item
     And User select quantity '5' on Apex Legends
     And User click add to Cart button
-    Then the cart icon quantity should change to '2' Apex Legends
+    Then the cart icon quantity should change to '5' Apex Legends
     And User click on Cart option for Apex Legends
     And User click on Proceed to Checkout button
     And User click on Place Your Order
