@@ -77,24 +77,29 @@ public class RetailOrderSteps extends CommonUtility {
 	//Place an order 
 
 	@When("User change the category to {string} search for an item Apex Legends")
-	public void userChangeTheCategoryToSearchForAnItemApexLegends(String string) {
+	public void userChangeTheCategoryToSearchForAnItemApexLegends(String string)  {
 		selectByVisibleText(pom.retailOrderPage().allDepartmentDropdown, string);
 		logger.info("Category changed to electronics successfully");
+		;
 	}
 
 
 	@Then("User search for an item {string} Apex Legends")
-	public void userSearchForAnItemApexLegends(String apexLegends) {
+	public void userSearchForAnItemApexLegends(String apexLegends)  {
 		sendText(pom.retailOrderPage().searchInputField, apexLegends);
 		logger.info("Item name was entered successfully");
 		click(pom.retailOrderPage().searchBttn);
 		logger.info("Search button was clicked successfully");
+		;
 	}
+	
+    
 	@When("User click on Apex Legends item")
-	public void userClickOnApexLegendsItem() {
+	public void userClickOnApexLegendsItem()  {
 
 		click(pom.retailOrderPage().apexLegendsItem);
 		logger.info("Item Apex Legends was clicked successfully");
+		;
 	}
 
 
@@ -103,12 +108,15 @@ public class RetailOrderSteps extends CommonUtility {
 
 		selectByVisibleText(pom.retailOrderPage().qtyDropdown, string);
 		logger.info("Apex Legends qty was changed successfully");
+		
 	}
 
 	@Then("the cart icon quantity should change to {string} Apex Legends")
-	public void theCartIconQuantityShouldChangeToApexLegends(String itemQtyInTheCart) {
+	public void theCartIconQuantityShouldChangeToApexLegends(String itemQtyInTheCart)  {
+	
 		Assert.assertEquals(itemQtyInTheCart, pom.retailOrderPage().cartItemQty.getText());
 		logger.info("Item qty in the cart was validated successfully");
+	
 	}
 
 
