@@ -1,4 +1,4 @@
-@Regression
+@Regression3
 Feature: Sign in Feature
 
   Background: 
