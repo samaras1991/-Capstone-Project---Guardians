@@ -23,7 +23,10 @@ public class BaseSetup {
 
 	public void fakemethode(){
 		
-		System.out.println("rachid");
+
+		System.out.println("mohamed again");
+
+
 	}
 
 	public BaseSetup() {
