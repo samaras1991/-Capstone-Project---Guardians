@@ -22,6 +22,8 @@ public class BaseSetup {
 	public static Logger logger;
 
 	public void fakemethode(){
+		
+		System.out.println("mohamed");
 	}
 
 	public BaseSetup() {
