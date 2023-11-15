@@ -8,7 +8,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         tags =  "@updatePayment99master1",
-        features = ("classpath:features"),
+        features = ("classpath:features mohamed"),
         glue="tek.sdet.framework",
         dryRun = false,
         plugin = {
