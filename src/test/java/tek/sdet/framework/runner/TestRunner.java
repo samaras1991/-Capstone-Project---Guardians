@@ -6,17 +6,10 @@ import org.junit.runner.RunWith;
 import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
-        tags =  "@updatePayment99",
-        features = ("classpath:features"),
-        glue="tek.sdet.framework",
-        dryRun = false,
-        plugin = {
+@CucumberOptions(tags = "@updatePayment99master1", features = ("classpath:features mohamed"), glue = "tek.sdet.framework changes vs", dryRun = false, plugin = {
                 "pretty",
                 "html:target/htmlReports/cucumber-pretty.html",
                 "json:target/jsonReports/cucumber.json"
-        },
-        snippets = CAMELCASE,
-        monochrome = false)
+}, snippets = CAMELCASE, monochrome = false)
 public class TestRunner {
 }
