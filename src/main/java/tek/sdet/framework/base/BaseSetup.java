@@ -15,10 +15,14 @@ import tek.sdet.framework.config.EdgeBrowser;
 import tek.sdet.framework.config.FireFoxBrowser;
 import tek.sdet.framework.utilities.ReadYamlFiles;
 
+
 public class BaseSetup {
 	private static WebDriver webDriver;
 	private final ReadYamlFiles environmentVariables;
 	public static Logger logger;
+
+	public void fakemethode(){
+	}
 
 	public BaseSetup() {
 		String filePath = System.getProperty("user.dir") + "/src/main/resources/env_config.yml";
