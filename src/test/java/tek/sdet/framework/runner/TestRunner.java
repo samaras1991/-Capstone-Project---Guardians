@@ -7,7 +7,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        tags =  "@Regression",
+        tags =  "@updatePayment99",
         features = ("classpath:features"),
         glue="tek.sdet.framework",
         dryRun = false,
@@ -17,6 +17,6 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
                 "json:target/jsonReports/cucumber.json"
         },
         snippets = CAMELCASE,
-        monochrome = true)
+        monochrome = false)
 public class TestRunner {
 }
