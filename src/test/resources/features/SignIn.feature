@@ -10,6 +10,7 @@ Feature: Sign in Feature
     And User enter email 'mohamed10@gmail.com' and password 'Mohamed1991@'
     And User click on login button
     Then User should be logged in into Account
+    hjghjfhgfg
 
   @Register
   Scenario: Verify user can create an account into Retail Website
