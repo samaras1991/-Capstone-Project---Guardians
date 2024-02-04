@@ -21,5 +21,10 @@ Feature: Sign in Feature
      Then Verify user account is created
 
      from upstream
+<<<<<<< HEAD
      
      add from eclipse
+=======
+
+     addiionel lines before pushing
+>>>>>>> bca95ad0f3e30c576b138dad0b41f975575e1f61
