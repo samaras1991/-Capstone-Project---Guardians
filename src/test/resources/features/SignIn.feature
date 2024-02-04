@@ -20,6 +20,4 @@ Feature: Sign in Feature
     And User click on SignUp button
      Then Verify user account is created
 
-     from upstream
-
-     addiionel lines before pushing
+new line
