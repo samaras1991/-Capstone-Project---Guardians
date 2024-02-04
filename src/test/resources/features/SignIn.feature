@@ -19,12 +19,11 @@ Feature: Sign in Feature
       | mohamed | mohamed2009@gmail.com | Mohamed1991@ | Mohamed1991@    |
     And User click on SignUp button
      Then Verify user account is created
-
-     from upstream
-<<<<<<< HEAD
      
-     add from eclipse
-=======
+     jdjwqhdkjhskjjkdakcsajcn
+     djwqhdjhjdhjd
+     djwqdhqdhjwqd
+     
 
-     addiionel lines before pushing
->>>>>>> bca95ad0f3e30c576b138dad0b41f975575e1f61
+
+
